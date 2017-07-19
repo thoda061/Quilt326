@@ -5,7 +5,7 @@
  */
 public class QuiltSquare {
 	
-	private int scale;
+	private double scale;
 	private int[] colour = new int[3];
 	
 	public QuiltSquare(String input) {
@@ -14,7 +14,7 @@ public class QuiltSquare {
 		for(int i = 0; i < input.length(); i++){
 			if(input.charAt(i) == ' '){
 				if(numCount == 0) {
-					scale = Integer.valueOf(input.substring(currChar,i));
+					scale = Double.valueOf(input.substring(currChar,i));
 					currChar = i+1;
 				} else {
 					colour[numCount - 1] = Integer.valueOf(input.substring(currChar,i));
@@ -26,7 +26,7 @@ public class QuiltSquare {
 		}
 	}
 
-	public int getScale() {
+	public double getScale() {
 		return scale;
 	}
 

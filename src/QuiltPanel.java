@@ -34,7 +34,7 @@ public class QuiltPanel extends JPanel{
 		for(QuiltSquare qs : input) {
 			ArrayList<int[]> tempPoints = new ArrayList();
 			g.setColor(new Color(qs.getColour()[0],qs.getColour()[1],qs.getColour()[2]));
-			int size = 400 * (qs.getScale()/scaleSum);
+			int size = (new Double(400 * (qs.getScale()/scaleSum))).intValue();
 			for(int[] point : centrePoints) {
 				g.fillRect(point[0]-(size/2), point[1]-(size/2), size, size);
 				int[] corner = {point[0]-(size/2),point[1]-(size/2)};
